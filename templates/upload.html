@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div class="container">
+        <pre><h4>Subject: {{sub}}     Course: {{ course }}      Sem: {{ sem }} </h4></pre>
+    </div>
+    <div>
+      <h3>Total class: {{totalclass}}</h3>
+      <table class="table table-striped table-responsive table-bordered">
+        <tr>
+          <th>Subject Code</th><th colspan=3>Subject</th><th>Days Present</th><th>Attendance(%)</th><th>Present/Absent</th>
+        </tr>
+        {% for details in attd_details %}
+          <tr>
+            <td>{{details.id}}</td><td colspan=3>{{details.name}}</td><td>{{details.attd}}</td><td>{{"%.2f"|format(details.percentage)}}</td><td>{{details.status}}</td>
+          </tr>
+        {% endfor %}
+      </table>
+    </div>
+{% endblock content %}

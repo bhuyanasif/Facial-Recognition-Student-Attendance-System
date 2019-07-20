@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block content %}
+  <form method="POST" action="/upload" enctype="multipart/form-data">
+      Subject: <input type='text' name="sub" class=" random-hide account-heading" value={{ sub }} disabled>
+      <h4 class="text-secondary">Course: {{ course }}</h4>
+      <h4 class="text-secondary">Sem: {{ sem }}</h4>
+
+        <div class="form-group">
+              <input name="file" type="file" accept="image/*">
+        </div>
+        <div class="form-group">
+            <input type="submit" class="btn btn-default" value="Upload">
+        </div>
+    </form>
+{% endblock content %}
