@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+{% block content %}
+  <div class="container">
+      <form method='POST' action='/manualadd'>
+        <input type = "text" name="regid" placeholder="ID">
+        <input class="btn btn-default" name="manual" type="Submit" value="Mark Present">
+        <input type="Submit" class="btn btn-default" name="manual2" value="Mark Absent">
+      </form>
+    </div>
+{% endblock content %}

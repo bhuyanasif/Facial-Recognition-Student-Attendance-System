@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div class="content-section">
+      <form method="POST" action="/manualadd">
+            <div class="form-group">
+                <input type="submit" class="btn btn-default" value="Add Mannually">
+            </div>
+        </form>
+        <form method="POST" action="/viewattendance">
+              <div class="form-group">
+                  <input type="submit" class="btn btn-default" value="View Attendance">
+              </div>
+        </form>
+        <form method="POST" action="/fattendance">
+              <div class="form-group">
+                  <input type="submit" class="btn btn-default" value="Take Attendance">
+              </div>
+        </form>
+
+    </div>
+{% endblock content %}
